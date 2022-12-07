@@ -20,12 +20,12 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 }
 
 function validateInput(testInput) {
-    let userInput = Number(testInput);
+    
    if (testInput = "") {
     return "Empty";
-   } else if (isNaN(userInput)===true){
+   } else if (isNaN(testInput)===true){
     return "Not a Number";
-   } else if (isNaN(userInput)===false) {
+   } else if (isNaN(testInput)===false) {
     return "Is a Number";
    }
 }
@@ -48,23 +48,23 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     if ((fuelLevel<10000) && (cargoLevel<= 10000)){
 launchStatus.innerHTML="Shuttle not ready for launch"
 launchStatus.style.color="Red"
-        fuelStatus.innerHTML="Not enough fuel for launch"
-cargoStatus.innerHTML="Mass low enough for launch"
+        fuel.innerHTML="Not enough fuel for launch"
+cargo.innerHTML="Mass low enough for launch"
     } else if ((fuelLevel>=10000) && (cargoLevel> 10000)){
         launchStatus.innerHTML="Shuttle not ready for launch"
         launchStatus.style.color="Red"
-        fuelStatus.innerHTML="Fuel level sufficient for launch"
-        cargoStatus.innerHTML="Mass too high for launch"
+        fuel.innerHTML="Fuel level sufficient for launch"
+        cargo.innerHTML="Mass too high for launch"
     } else if ((fuelLevel<10000) && (cargoLevel>10000)){
         launchStatus.innerHTML="Shuttle not ready for launch"
         launchStatus.style.color="Red"
-        fuelStatus.innerHTML="Not enough fuel for launch"
-        cargoStatus.innerHTML="Mass too high for launch"
+        fuel.innerHTML="Not enough fuel for launch"
+        cargo.innerHTML="Mass too high for launch"
     } else {
         launchStatus.innerHTML="Shuttle not ready for launch"
         launchStatus.style.color="Green"
-        fuelStatus.innerHTML="Fuel level sufficient for launch"
-        cargoStatus.innerHTML="Mass low enough for launch"
+        fuel.innerHTML="Fuel level sufficient for launch"
+        cargo.innerHTML="Mass low enough for launch"
     }
    }
 }
