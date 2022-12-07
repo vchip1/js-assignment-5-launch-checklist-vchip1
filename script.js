@@ -13,19 +13,19 @@ window.addEventListener("load", function() {
    }).then(function () {
        console.log(listedPlanets);
        let newPlanet=pickPlanet(listedPlanets);
-addDestinationInfo(document, newPlanet.name, newPlanet.dismeter, newPlanet.star, newPlanet.distance, newPlanet.moons, newPlanet.image);
+addDestinationInfo(document, newPlanet.name, newPlanet.diameter, newPlanet.star, newPlanet.distance, newPlanet.moons, newPlanet.image);
    })
-   document.getElementNyId("faultyItems").style.visibility="hidden";
+   document.getElementById("faultyItems").style.visibility="hidden";
    let form=document.querySelector("form");
 form.addEventListener("submit", function(event){
     event.preventDefault();
     let pilot=document.querySelector("input[name=pilotName]").value
     let copilot=document.querySelector("input[name=copilotName]").value
     let fuelLevel=document.querySelector("input[name=fuelLevel]").value
-    let cargoMass=document.querySelector("input[name=cargoMass]").value
+    let cargoLevel=document.querySelector("input[name=cargoMass]").value
 
     formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
-})
+});
 
 
 
