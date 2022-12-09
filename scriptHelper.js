@@ -1,5 +1,13 @@
+
+//const myFunction = require('/node_modules/node-fetch');
+
+
 // Write your helper functions here!
+
+
 require('isomorphic-fetch');
+
+//document.getElementById("formSubmit").disabled = false;
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
    //Here is the HTML formatting for our mission target div.
@@ -37,9 +45,9 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    let cargo=document.getElementById("cargoStatus");
 
    if (validateInput(pilot)==="Empty" || validateInput(copilot)==="Empty" || validateInput(fuelLevel)==="Empty" || validateInput(cargoLevel)==="Empty"){
-    console.error("Error: One or more fields are blank. Please complete all fields.")
+    alert("Error: One or more fields are blank. Please complete all fields.")
    } else if (validateInput(pilot)==="Is a Number" || validateInput(copilot)==="Is a Number" || validateInput(fuelLevel)==="Not a Number" || validateInput(cargoLevel)==="Not a Number"){
-    console.error("Error: One or more fields contains an invalid entry.")
+    alert("Error: One or more fields contains an invalid entry.")
    } else {
     list.style.visibility="visible";
     pilotStatus.innerHTML=`Pilot ${pilot} is ready for launch`
